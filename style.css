@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;  
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+span, a {
+    display: inline-block;
+}
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 30px;
+    color: #333;
+}
+.header {
+    margin-bottom: 24px;
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.nava {
+    text-decoration: none;
+    color: #333;
+    font-size: 42px;
+}
+.navbrand {
+    text-decoration: none;
+}
+.navlogo {
+    width: 90px;
+}
+.navtext {
+    font-size: 24px;
+    line-height: 1.4;
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.menulink {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    padding-bottom: 3px;
+    position: relative;
+    transition: 0.2s color linear;
+}
+.menulink:hover {
+    color: black;
+}
+.menulink::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    transform-origin: right center;
+    transform: scaleX(0);
+    transition: 0.2s transform linear;
+}
+.menulink:hover::after {
+    transform-origin: left center;
+    transform: scaleX(1);
+}
+.mobilenav {
+    background-color: #333;
+    color: #fff;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    display: none;
+}
+.mobilenavbtn, .close {
+    background-color: #fff;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    width: 35px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.close {
+    background-color: #333;
+    color: #fff;
+    width: 30px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    display: none;
+}
+.mobilenavtitle {
+    font-size: 22px;
+}
+/* home */
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+.homeleft, .homebox {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.homeleft {
+    width: 68%;
+    padding: 18px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url("img/photo1.jpg");
+}
+.homeright {
+    width: 30%;
+}
+.homebox {
+    margin-bottom: 10px;
+    height: 180px;
+    padding: 15px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    url("img/photo2.jpg");
+}
+.homebox:last-of-type {
+    margin-bottom: 0;
+}
+.category {
+    text-transform: uppercase;
+}
+.homelefttitle {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.homeboxtitle {
+    font-size: 20px;
+}
+
+/* sections */
+.sections, .flex, .article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.section1 {
+    width: 68%;
+}
+.section2 {
+    width: 30%;
+}
+.hasline {
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+}
+.black, .articlecategory, .minicategory {
+    background-color: #333;
+    color: #fff;
+    padding: 3px 10px;
+}
+.unstyleda {
+    text-decoration: none;
+    color: #333;
+}
+.article {
+    align-items: flex-start;
+}
+.articleimg {
+    width: 40%;
+}
+.articlecontent {
+    width: 58%;
+}
+.articletitle {
+    font-size: 20px;
+}
+.articletext {
+    margin-bottom: 15px;
+}
+.articlerow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    margin: 10px 0;
+}
+.articlecategory {
+    text-transform: uppercase;
+    padding: 1px 7px;
+}
+.articleauthor {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.articledate {
+    color: #777;
+}
+.articlereadcount {
+    background-color: #333;
+    color: white;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.articlereadcount::after {
+    content: "";
+    position: absolute;
+    border-left: 6px solid #333;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    left: 0;
+    top: 100%;
+    transform: translateY(-50%);
+}
+.articlelink {
+    background-color: #00f;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    padding: 3px 12px;
+}
+.socialbig {
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 240px;
+    margin-bottom: 30px;
+}
+.socialbig1 {
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), url("img/telegram_bg.png");
+}
+.socialbig2 {
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), url("img/telegram_bot_bg.png");
+}
+.socialbiglink {
+    text-decoration: none;
+    background-color: white;
+    color: #333;
+    padding: 4px 14px;
+}
+.socialbigtitle {
+    margin-bottom: 12px;
+}
+.socialbigtext {
+    margin-bottom: 20px;
+}
+.miniswrap {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    padding-top: 10px;
+}
+.mini {
+    width: 49%;
+}
+.minifigure {
+    position: relative;
+}
+.miniimg {
+    display: block;
+}
+.minicategory {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 13px;
+}
+.minititle {
+    font-size: 15px;
+}
+
+
+
+/* @media */
+@media(max-width:1110px){
+    .nav {
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .navtext, .nava {
+        width: 100%;
+    }
+    .navbrand {
+        margin: 10px 0;
+    }
+    .menu {
+        row-gap: 10px;
+    }
+    .menudiv {
+        width: 33.33%;
+        text-align: center;
+    }
+}
+@media(max-width:950px){
+    .homeleft, .homeright, .articleimg, .articlecontent {
+        width: 100%;
+    }
+    .homeleft {
+        margin-bottom: 15px;
+        height: 400px;
+    }
+    .homeright {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .homebox {
+        width: 32%;
+    }
+    .section1 {
+        width: 60%;
+    }
+    .section2 {
+        width: 38%;
+    }
+}
+@media(max-width:750px){
+    .section1, .section2 {
+        width: 49%;
+    }
+    .homebox, .homeleft {
+        height: auto;
+    }
+}
+@media(max-width:700px){
+    .container {
+        padding: 0 15px;
+    }
+}
+@media(max-width:600px){
+    .homebox {
+        width: 100%;
+        height: 130px;
+    }
+    .section1, .section2 {
+        width: 100%;
+    }
+    .miniswrap {
+        position: static;
+    }
+    .homelefttitle {
+        font-size: 21px;
+    }
+    .homeboxtitle, .articletitle {
+        font-size: 18px;
+    }
+}
+@media(max-width:520px){
+    .mobilenav {
+        display: flex;
+    }
+    .nava {
+        display: none;
+    }
+    .menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        align-content: flex-start;
+        padding: 40px;
+        row-gap: 20px;
+        display: none;
+    }
+    .showmenu {
+        display: flex;
+        animation: menu1 0.2s linear;
+        transform-origin: top;
+    }
+    @keyframes menu1 {
+        0% {
+            transform: scale(0.7);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    .menudiv {
+        width: 100%;
+        text-align: left;
+    }
+    .close {
+        display: inline-flex;
+    }
+}
+@media(max-width:370px){
+    .mini {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .socialbig {
+        height: auto;
+    }
+    .container {
+        padding: 0 10px;
+    }
+    .mobilenav {
+        padding: 5px 10px;
+    }
+    .mobilenavtitle, .navtext {
+        font-size: 20px;
+    }
+    .navlogo {
+        width: 75px;
+    }
+    .home {
+        text-align: center;
+    }
+    .homeleft, .homebox {
+        padding: 10px;
+    }
+    .homebox {
+        height: auto;
+    }
+    .articlespans {
+        width: 100%;
+        margin-bottom: 7px;
+    }
+    .close {
+        top: 20px;
+        right: 20px;
+    }
+    .menu {
+        padding: 30px;
+    }
+}
